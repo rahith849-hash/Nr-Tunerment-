@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ফ্রি ফায়ার টুর্নামেন্ট - বাংলাদেশের সেরা প্ল্যাটফর্ম | FF টুর্নামেন্ট প্রো</title>
+<meta name="description" content="বাংলাদেশের সবচেয়ে বড় ফ্রি ফায়ার টুর্নামেন্ট প্ল্যাটফর্ম। লাইভ ম্যাচ, তাৎক্ষণিক পুরস্কার, bKash/Nagad পেমেন্ট। এখনই যোগ দিন!">
+<meta name="theme-color" content="#006A4E">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/*
+* CORE VARIABLES & RESET
+*/
+:root {
+--color-bd-green: #006A4E;
+--color-bd-red: #F42A41;
+--color-gold: #FFD700;
+--color-black: #0A0A0A;
+--color-dark-gray: #151515;
+--color-text-gray: #B0B0B0;
+--gradient-primary: linear-gradient(135deg, #006A4E 0%, #F42A41 100%);
+--gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFAA00 100%);
+--gradient-dark: linear-gradient(180deg, rgba(0,0,0,0) 0%, #0A0A0A 100%);
+--glass-bg: rgba(255, 255, 255, 0.05);
+--glass-border: rgba(255, 255, 255, 0.1);
+--shadow-glow: 0 0 20px rgba(0, 106, 78, 0.3);
+--font-bengali: 'Hind Siliguri', sans-serif;
+--font-english: 'Poppins', sans-serif;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+-webkit-tap-highlight-color: transparent;
+}
+
+body {
+font-family: var(--font-bengali);
+background-color: var(--color-black);
+color: white;
+line-height: 1.5;
+overflow-x: hidden;
+background-image:
+radial-gradient(circle at 10% 20%, rgba(0, 106, 78, 0.15) 0%, transparent 20%),
+radial-gradient(circle at 90% 80%, rgba(244, 42, 65, 0.1) 0%, transparent 20%);
+}
+
+/*
+* UTILITIES
+*/
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-col { display: flex; flex-direction: column; }
+.text-center { text-align: center; }
+
+.gradient-text {
+background: var(--gradient-primary);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+
+.text-gold { color: var(--color-gold); }
+.text-red { color: var(--color-bd-red); }
+.text-green { color: var(--color-bd-green); }
+
+/* Glassmorphism */
+.glass-card {
+background: var(--glass-bg);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid var(--glass-border);
+border-radius: 16px;
+padding: 24px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+transform: translateY(-5px);
+border-color: rgba(255, 215, 0, 0.3);
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Buttons */
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 14px 28px;
+border-radius: 50px;
+font-weight: 700;
+font-size: 16px;
+text-decoration: none;
+cursor: pointer;
+transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+position: relative;
+overflow: hidden;
+border: none;
+}
+
+.btn-primary {
+background: var(--gradient-primary);
+color: white;
+box-shadow: 0 4px 15px rgba(244, 42, 65, 0.4);
+}
+
+.btn-primary:active { transform: scale(0.95); }
+
+.btn-pulse {
+animation: btnPulse 2s infinite;
+}
+
+@keyframes btnPulse {
+0% { box-shadow: 0 0 0 0 rgba(244, 42, 65, 0.7); }
+70% { box-shadow: 0 0 0 10px rgba(244, 42, 65, 0); }
+100% { box-shadow: 0 0 0 0 rgba(244, 42, 65, 0); }
+}
+
+/* Alpona Pattern Overlay */
+.alpona-bg {
+position: absolute;
+top: 0; left: 0; width: 100%; height: 100%;
+background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+pointer-events: none;
+z-index: 0;
+}
+
+/*
+* SECTIONS
+*/
+
+/* Loading Screen */
+#loading-screen {
+position: fixed;
+top: 0; left: 0; width: 100%; height: 100%;
+background: var(--color-black);
+z-index: 9999;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+.loader-logo {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+border: 3px solid transparent;
+border-top-color: var(--color-bd-green);
+border-right-color: var(--color-bd-red);
+border-bottom-color: var(--color-gold);
+animation: spin 1s linear infinite;
+margin-bottom: 20px;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Hero Section */
+.hero {
+position: relative;
+padding: 120px 0 60px;
+min-height: 90vh;
+display: flex;
+align-items: center;
+overflow: hidden;
+}
+
+.hero-content {
+z-index: 2;
+position: relative;
+}
+
+.hero h1 {
+font-size: 38px;
+line-height: 1.2;
+margin-bottom: 16px;
+font-weight: 700;
+}
+
+.hero p {
+font-size: 16px;
+color: #ddd;
+margin-bottom: 32px;
+max-width: 500px;
+}
+
+.mockup-container {
+position: relative;
+margin-top: 40px;
+perspective: 1000px;
+}
+
+.phone-mockup {
+width: 280px;
+height: 560px;
+background: var(--color-dark-gray);
+border-radius: 36px;
+border: 8px solid #333;
+margin: 0 auto;
+position: relative;
+overflow: hidden;
+box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+animation: float 6s ease-in-out infinite;
+transform-style: preserve-3d;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0) rotateX(0deg); }
+50% { transform: translateY(-15px) rotateX(2deg); }
+}
+
+/* Features Grid */
+.features { padding: 60px 0; position: relative; }
+.feature-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 16px;
+margin-top: 40px;
+}
+
+.feature-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+.feature-title { font-weight: 700; margin-bottom: 8px; font-size: 16px; }
+.feature-desc { font-size: 13px; color: var(--color-text-gray); }
+
+/* Stats */
+.stats-section { padding: 60px 0; }
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+.stat-card { text-align: center; }
+.stat-number { font-size: 32px; font-weight: 700; color: var(--color-gold); display: block; }
+.stat-label { font-size: 14px; color: white; }
+
+/* How it Works */
+.steps-section { padding: 60px 0; position: relative; }
+.step-item {
+display: flex;
+align-items: flex-start;
+margin-bottom: 30px;
+position: relative;
+}
+.step-number {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: var(--gradient-primary);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+margin-right: 16px;
+flex-shrink: 0;
+box-shadow: 0 0 10px rgba(0, 106, 78, 0.5);
+}
+.step-content h3 { font-size: 18px; margin-bottom: 4px; }
+.step-content p { font-size: 14px; color: var(--color-text-gray); }
+
+.step-line {
+position: absolute;
+left: 20px;
+top: 40px;
+bottom: -30px;
+width: 2px;
+background: rgba(255,255,255,0.1);
+z-index: 0;
+}
+.step-item:last-child .step-line { display: none; }
+
+/* Testimonials */
+.reviews-section { padding: 60px 0; background: #0f0f0f; }
+.review-card {
+min-width: 280px;
+margin-right: 16px;
+}
+.reviewer-info { display: flex; align-items: center; margin-bottom: 12px; }
+.avatar {
+width: 40px; height: 40px; border-radius: 50%;
+background: linear-gradient(45deg, #333, #555);
+margin-right: 12px;
+display: flex; align-items: center; justify-content: center;
+font-size: 20px;
+}
+
+/* Payment */
+.payment-section { text-align: center; padding: 60px 0; }
+.payment-logos {
+display: flex;
+justify-content: center;
+gap: 20px;
+margin: 24px 0;
+}
+.pay-logo {
+height: 50px;
+background: white;
+padding: 8px 16px;
+border-radius: 8px;
+display: flex;
+align-items: center;
+}
+
+/* Mega CTA */
+.mega-cta {
+padding: 80px 20px;
+background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDA2YTRlIi8+PC9zdmc+');
+background-size: cover;
+text-align: center;
+position: relative;
+}
+
+/* Footer */
+footer {
+background: #050505;
+padding: 60px 0 20px;
+border-top: 1px solid #222;
+}
+.footer-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 32px;
+margin-bottom: 40px;
+}
+.footer-link {
+color: var(--color-text-gray);
+text-decoration: none;
+display: block;
+margin-bottom: 10px;
+font-size: 14px;
+}
+.copyright {
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid #111;
+font-size: 12px;
+color: #666;
+}
+
+/* Animations */
+.animate-on-scroll {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.animate-in {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+.hero { padding: 100px 0; min-height: 80vh; }
+.hero-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+align-items: center;
+}
+.hero h1 { font-size: 56px; }
+.feature-grid { grid-template-columns: repeat(3, 1fr); }
+.stats-grid { grid-template-columns: repeat(4, 1fr); }
+.footer-grid { grid-template-columns: repeat(4, 1fr); }
+}
+</style>
+
+</head>
+<body>
+
+<!-- Loading Screen -->
+
+<div id="loading-screen">
+<div class="loader-logo"></div>
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">লোড হচ্ছে...</div>
+</div>
+
+<div class="alpona-bg"></div>
+
+<!-- Nav -->
+
+<nav style="position: absolute; top: 0; width: 100%; z-index: 10; padding: 20px;">
+<div class="container flex-center" style="justify-content: space-between;">
+<div style="font-weight: 700; font-size: 20px; display: flex; align-items: center; gap: 8px;">
+<span style="color: var(--color-bd-red)">FF</span> টুর্নামেন্ট <span style="color: var(--color-gold)">প্রো</span>
+</div>
+<a href="#" class="btn btn-primary download-cta" style="padding: 8px 16px; font-size: 12px;">অ্যাপটি নিন</a>
+</div>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+<div class="container hero-container">
+<div class="hero-content animate-on-scroll">
+<span style="background: rgba(0, 106, 78, 0.2); color: #00D9FF; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1px solid rgba(0, 217, 255, 0.3); margin-bottom: 16px; display: inline-block;">
+🇧🇩 বাংলাদেশের #১ গেমিং প্ল্যাটফর্ম
+</span>
+<h1>প্রতিটি টুর্নামেন্টে <br><span class="gradient-text">জয়ী হও!</span></h1>
+<p>বাংলাদেশের সবচেয়ে বড় ফ্রি ফায়ার টুর্নামেন্ট প্ল্যাটফর্ম। প্রতিদিন খেলো, প্রতিদিন জিতো।</p>
+
+<div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="#" class="btn btn-primary btn-pulse download-cta" data-location="hero">
+                🔥 অ্যাপটি নিন — সম্পূর্ণ ফ্রি
+            </a>
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #888;">
+                <span style="color: var(--color-bd-green);">✓</span> ৫০,০০০+ গেমার যোগ দিয়েছেন
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Mobile Mockup -->
+    <div class="mockup-container animate-on-scroll" style="transition-delay: 0.2s;">
+        <div class="phone-mockup">
+            <!-- SVG Screen Content: Lobby -->
+            <svg viewBox="0 0 280 560" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#0A0A0A"/>
+                
+                <!-- Header -->
+                <rect x="0" y="0" width="280" height="60" fill="#111"/>
+                <text x="20" y="38" fill="white" font-family="sans-serif" font-weight="bold" font-size="16">FF টুর্নামেন্ট প্রো</text>
+                <circle cx="250" cy="32" r="12" fill="#222"/>
+                <circle cx="256" cy="26" r="4" fill="#F42A41"/>
+
+                <!-- Featured Card -->
+                <g transform="translate(15, 80)">
+                    <rect width="250" height="140" rx="12" fill="#151515" stroke="#333"/>
+                    <rect x="0" y="0" width="250" height="80" rx="12" fill="#006A4E" opacity="0.3"/>
+                    <text x="15" y="105" fill="white" font-weight="bold" font-family="sans-serif" font-size="14">ঢাকা চ্যাম্পিয়নশিপ ২০২৫</text>
+                    <text x="15" y="125" fill="#FFD700" font-family="sans-serif" font-size="12">প্রাইজ: ১ লক্ষ টাকা</text>
+                    <rect x="160" y="95" width="75" height="30" rx="15" fill="url(#grad1)"/>
+                    <text x="175" y="115" fill="white" font-size="10" font-family="sans-serif">যোগ দিন</text>
+                </g>
+
+                <!-- List -->
+                <g transform="translate(15, 240)">
+                    <text x="0" y="0" fill="#aaa" font-size="12" font-family="sans-serif">লাইভ টুর্নামেন্ট (৩টি)</text>
+                    
+                    <!-- Item 1 -->
+                    <rect y="15" width="250" height="60" rx="8" fill="#1a1a1a" stroke="#222"/>
+                    <circle cx="30" cy="45" r="15" fill="#333"/>
+                    <text x="55" y="38" fill="white" font-size="12" font-family="sans-serif">সোল স্কোয়াড কাপ</text>
+                    <text x="55" y="55" fill="#00D9FF" font-size="10" font-family="sans-serif">এন্ট্রি: ৫০ টাকা</text>
+                    <text x="200" y="48" fill="#F42A41" font-size="10" font-family="sans-serif">● লাইভ</text>
+
+                    <!-- Item 2 -->
+                    <rect y="85" width="250" height="60" rx="8" fill="#1a1a1a" stroke="#222"/>
+                    <circle cx="30" cy="115" r="15" fill="#333"/>
+                    <text x="55" y="108" fill="white" font-size="12" font-family="sans-serif">রংপুর র‍্যাপিড ফায়ার</text>
+                    <text x="55" y="125" fill="#00D9FF" font-size="10" font-family="sans-serif">এন্ট্রি: ২০ টাকা</text>
+                </g>
+
+                <!-- Bottom Nav -->
+                <rect x="0" y="500" width="280" height="60" fill="#111"/>
+                <circle cx="46" cy="530" r="15" fill="#006A4E" opacity="0.2"/>
+                <path d="M46 525 L50 535 H42 Z" fill="#006A4E"/>
+                
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#006A4E;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#F42A41;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Why We Are #1 -->
+
+<section class="features">
+<div class="container">
+<div class="text-center animate-on-scroll">
+<h2 style="font-size: 28px; margin-bottom: 10px;">কেন আমরা <span class="text-gold">#১</span>?</h2>
+<p style="color: #888;">বাংলাদেশের গেমারদের প্রথম পছন্দ</p>
+</div>
+
+<div class="feature-grid">
+        <div class="glass-card animate-on-scroll">
+            <span class="feature-icon">🏆</span>
+            <div class="feature-title">লাইভ ব্র্যাকেট</div>
+            <div class="feature-desc">প্রতিটি ম্যাচ রিয়েল-টাইমে ট্র্যাক করুন</div>
+        </div>
+        <div class="glass-card animate-on-scroll">
+            <span class="feature-icon">⚡</span>
+            <div class="feature-title">দ্রুত রেজিস্ট্রেশন</div>
+            <div class="feature-desc">মাত্র ১ মিনিটে টুর্নামেন্টে যোগ দিন</div>
+        </div>
+        <div class="glass-card animate-on-scroll">
+            <span class="feature-icon">💰</span>
+            <div class="feature-title">তাৎক্ষণিক পেমেন্ট</div>
+            <div class="feature-desc">জিতার সাথে সাথেই bKash/Nagad এ টাকা</div>
+        </div>
+        <div class="glass-card animate-on-scroll">
+            <span class="feature-icon">👥</span>
+            <div class="feature-title">টিম ম্যানেজমেন্ট</div>
+            <div class="feature-desc">বন্ধুদের নিয়ে স্কোয়াড তৈরি করুন</div>
+        </div>
+        <div class="glass-card animate-on-scroll">
+            <span class="feature-icon">📊</span>
+            <div class="feature-title">লাইভ স্ট্যাটস</div>
+            <div class="feature-desc">কিল, উইন রেট সব কিছু দেখুন</div>
+        </div>
+        <div class="glass-card animate-on-scroll">
+            <span class="feature-icon">💬</span>
+            <div class="feature-title">বাংলা সাপোর্ট</div>
+            <div class="feature-desc">২৪/৭ আমাদের সাথে কথা বলুন</div>
+        </div>
+    </div>
+    
+    <div class="text-center" style="margin-top: 40px;">
+        <button class="btn btn-primary download-cta" data-location="feature-section">এখনই শুরু করুন</button>
+    </div>
+</div>
+</section>
+
+<!-- Stats -->
+
+<section class="stats-section bg-alpona" style="background-color: #0d0d0d; position: relative;">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-card animate-on-scroll">
+<span class="stat-number count-up" data-target="50000">০</span>
+<span class="stat-label">মোট প্লেয়ার</span>
+</div>
+<div class="stat-card animate-on-scroll">
+<span class="stat-number count-up" data-target="2500">০</span>
+<span class="stat-label">টুর্নামেন্ট</span>
+</div>
+<div class="stat-card animate-on-scroll">
+<span class="stat-number count-up" data-target="50">০</span>
+<span class="stat-label">লক্ষ+ টাকা বিতরণ</span>
+</div>
+<div class="stat-card animate-on-scroll">
+<span class="stat-number">৪.৯</span>
+<span class="stat-label">ইউজার রেটিং</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- How It Works -->
+
+<section class="steps-section">
+<div class="container">
+<div class="text-center animate-on-scroll" style="margin-bottom: 40px;">
+<h2>কিভাবে <span class="text-green">কাজ করে</span>?</h2>
+</div>
+
+<div style="max-width: 600px; margin: 0 auto;">
+        <div class="step-item animate-on-scroll">
+            <div class="step-line"></div>
+            <div class="step-number">০১</div>
+            <div class="step-content">
+                <h3>অ্যাপটি নিন</h3>
+                <p>নিচের লিংক থেকে অ্যাপটি সংগ্রহ করে সেটআপ করুন। সম্পূর্ণ ফ্রি!</p>
+            </div>
+        </div>
+        
+        <div class="step-item animate-on-scroll">
+            <div class="step-line"></div>
+            <div class="step-number">০২</div>
+            <div class="step-content">
+                <h3>টুর্নামেন্টে জয়েন করুন</h3>
+                <p>পছন্দের টুর্নামেন্ট বেছে নিন এবং এন্ট্রি ফি দিয়ে রেজিস্ট্রার করুন।</p>
+            </div>
+        </div>
+        
+        <div class="step-item animate-on-scroll">
+            <div class="step-number">০৩</div>
+            <div class="step-content">
+                <h3>জিতুন এবং টাকা তুলুন</h3>
+                <p>ম্যাচ জিতে পয়েন্ট পান এবং সরাসরি bKash/Nagad ওয়ালেটে টাকা নিন।</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Social Proof -->
+
+<section class="reviews-section">
+<div class="container">
+<h2 class="text-center" style="margin-bottom: 30px;">টপ গেমাররা কী বলছে</h2>
+
+<div style="overflow-x: auto; display: flex; padding-bottom: 20px;">
+        <div class="glass-card review-card">
+            <div class="reviewer-info">
+                <div class="avatar">R</div>
+                <div>
+                    <div style="font-weight: 700;">রাফি</div>
+                    <div style="font-size: 12px; color: #888;">ঢাকা</div>
+                </div>
+            </div>
+            <div class="text-gold" style="font-size: 12px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 13px; font-style: italic;">"Bhaiya, app ta ekdom joss! First tournament e 5000 taka jitsi. Bkash e instant paise. Highly recommend!"</p>
+        </div>
+        
+        <div class="glass-card review-card">
+            <div class="reviewer-info">
+                <div class="avatar">S</div>
+                <div>
+                    <div style="font-weight: 700;">সাকিব</div>
+                    <div style="font-size: 12px; color: #888;">চট্টগ্রাম</div>
+                </div>
+            </div>
+            <div class="text-gold" style="font-size: 12px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 13px; font-style: italic;">"Chittagong er sobai use kore. Tournament gula professional level. Prize money on time dey."</p>
+        </div>
+        
+        <div class="glass-card review-card">
+            <div class="reviewer-info">
+                <div class="avatar">T</div>
+                <div>
+                    <div style="font-weight: 700;">তানভীর</div>
+                    <div style="font-size: 12px; color: #888;">সিলেট</div>
+                </div>
+            </div>
+            <div class="text-gold" style="font-size: 12px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 13px; font-style: italic;">"Best FF tournament app in BD! Bangla support khub helpful."</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Payment Section -->
+
+<section class="payment-section">
+<div class="container">
+<h2>৫ get your reward 🎉 💸</h2>
+<p style="color: #aaa; margin-top: 8px;">সরাসরি মোবাইল ওয়ালেটে</p>
+
+<div class="payment-logos">
+        <div class="pay-logo">
+            <span style="color: #E2136E; font-weight: 800; font-family: sans-serif;">bKash</span>
+        </div>
+        <div class="pay-logo">
+            <span style="color: #F7941D; font-weight: 800; font-family: sans-serif;">Nagad</span>
+        </div>
+    </div>
+    
+    <div style="font-size: 14px; color: #00D9FF;">
+        ✅ ১০০% নিরাপদ এবং সুরক্ষিত
+    </div>
+</div>
+</section>
+
+<!-- Mega CTA -->
+
+<section class="mega-cta">
+<div class="container animate-on-scroll">
+<div style="border: 1px solid var(--color-gold); display: inline-block; padding: 4px 12px; border-radius: 4px; color: var(--color-gold); font-size: 12px; margin-bottom: 16px; box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);">
+🎁 বিশেষ অফার: ১০০ কয়েন ফ্রি!
+</div>
+<h2 style="font-size: 32px; margin-bottom: 20px;">আর দেরি কেন?</h2>
+
+
+<a href="#" class="btn btn-primary download-cta" style="width: 100%; max-width: 350px; padding: 20px; font-size: 20px;" data-location="footer-cta">
+        এখনই অ্যাপটি নিন
+    </a>
+    
+    <p style="margin-top: 16px; font-size: 14px; color: #ccc;">
+        ৫০,০০০+ গেমার ইতিমধ্যে যোগ দিয়েছেন
+    </p>
+</div>
+</section>
+
+<!-- Footer -->
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="flex-col">
+<h4 style="color: white; margin-bottom: 16px;">আমাদের সম্পর্কে</h4>
+<a href="#" class="footer-link">কমিউনিটি গাইডলাইন</a>
+<a href="#" class="footer-link">ক্যারিয়ার</a>
+<a href="#" class="footer-link">ব্লগ</a>
+</div>
+<div class="flex-col">
+<h4 style="color: white; margin-bottom: 16px;">সাপোর্ট</h4>
+<a href="#" class="footer-link">সাহায্য কেন্দ্র</a>
+<a href="#" class="footer-link">যোগাযোগ করুন</a>
+<a href="#" class="footer-link">FAQ</a>
+</div>
+<div class="flex-col">
+<h4 style="color: white; margin-bottom: 16px;">লিগ্যাল</h4>
+<a href="#" class="footer-link">নিয়ম ও শর্তাবলী</a>
+<a href="#" class="footer-link">গোপনীয়তা নীতি</a>
+<a href="#" class="footer-link">রিফান্ড নীতি</a>
+</div>
+<div class="flex-col">
+<h4 style="color: white; margin-bottom: 16px;">সোশ্যাল</h4>
+<a href="#" class="footer-link">Facebook BD</a>
+<a href="#" class="footer-link">YouTube</a>
+<a href="#" class="footer-link">Discord</a>
+</div>
+</div>
+
+
+<div class="copyright">
+        <p>&copy; ২০২৫ FF টুর্নামেন্ট প্রো। সর্বস্বত্ব সংরক্ষিত।</p>
+        <div style="margin-top: 8px; display: inline-flex; align-items: center; gap: 6px; background: #111; padding: 4px 10px; border-radius: 20px; font-size: 11px;">
+            বাংলাদেশে তৈরি 🇧🇩
+        </div>
+    </div>
+</div>
+</footer>
+
+<!-- Sticky Bottom CTA for Mobile -->
+
+<div id="sticky-footer" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #111; padding: 12px; border-top: 1px solid #222; z-index: 100; transform: translateY(100%); transition: transform 0.3s ease; display: flex; align-items: center; justify-content: space-between;">
+<div style="font-size: 12px;">
+<div style="color: white; font-weight: bold;">FF টুর্নামেন্ট প্রো</div>
+<div style="color: var(--color-gold);">১ লক্ষ টাকা প্রাইজ পুল!</div>
+</div>
+<a href="#" class="btn btn-primary download-cta" style="padding: 10px 20px; font-size: 14px;" data-location="sticky-footer">অ্যাপটি নিন</a>
+</div>
+
+<!-- JavaScript -->
+
+<script>
+/**
+* CONFIGURATION
+*/
+const APP_DOWNLOAD_LINK = "https://www.mediafire.com/file/e9lo0erk1n41ho3/Nr+Tunerment.apk/file";
+
+// Bengali Numeral Converter
+function toBengaliNumeral(num) {
+const bengaliDigits = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+return String(num).replace(/\d/g, d => bengaliDigits[d]);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+// 1. Loading Screen
+setTimeout(() => {
+const loader = document.getElementById('loading-screen');
+loader.style.opacity = '0';
+setTimeout(() => {
+loader.style.visibility = 'hidden';
+}, 800);
+}, 1500);
+
+// 2. Download Link Handler
+const ctaButtons = document.querySelectorAll('.download-cta');
+ctaButtons.forEach(btn => {
+btn.addEventListener('click', (e) => {
+e.preventDefault();
+window.location.href = APP_DOWNLOAD_LINK;
+});
+});
+
+// 3. Scroll Animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: "0px 0px -50px 0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('animate-in');
+if(entry.target.querySelector('.count-up')) {
+startCountUp(entry.target.querySelector('.count-up'));
+}
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+observer.observe(el);
+});
+
+// 4. Sticky Footer Logic
+const stickyFooter = document.getElementById('sticky-footer');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 500) {
+stickyFooter.style.transform = 'translateY(0)';
+} else {
+stickyFooter.style.transform = 'translateY(100%)';
+}
+});
+
+// 5. Counter Animation
+function startCountUp(el) {
+if(el.dataset.animated) return;
+el.dataset.animated = "true";
+
+const target = parseInt(el.dataset.target);
+const duration = 2000;
+const start = 0;
+const startTime = performance.now();
+
+function update(currentTime) {
+const elapsed = currentTime - startTime;
+const progress = Math.min(elapsed / duration, 1);
+const ease = 1 - Math.pow(1 - progress, 4);
+const current = Math.floor(start + (target - start) * ease);
+el.innerText = toBengaliNumeral(current) + (target > 1000 ? '+' : '');
+
+if (progress < 1) {
+requestAnimationFrame(update);
+}
+}
+requestAnimationFrame(update);
+}
+});
+</script>
+
+</body>
+</html>
